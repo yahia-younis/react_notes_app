@@ -1,3 +1,18 @@
+# you can use this app for save your notes in real database, producted by your email
+tools and library :
+- react router dom
+- axios
+- joi
+- jwt-decode
+- jquery
+- bootstrap
+- fontawsome
+- sweetalert2
+
+ <h1>
+ <a href="http://note-app.epizy.com/" target="_blank" >Notes React App Demo</a>
+ </h1>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

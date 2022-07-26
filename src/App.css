@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,button,ul,li,span,a {
+  text-transform: capitalize;
+}
+textarea {
+  resize: none;
+}
+.parant {
+  height: calc(100vh - 86px);
+}
+.box-option .dropdown-item {
+  font-size: .9rem;
+  transition: .3s all;
+}
+.box-option .dropdown-item:hover {
+  margin-left: .5rem;
+  background-color: unset;
+}
+.swal2-popup {
+  width: 31em!important;
+}
+.swal2-styled.swal2-confirm {
+  background-color: #005ebd!important;
+  padding: 0.625em 2.1em;
+}
+/* ----------------------------------- start loading animation ----------------------------------- */
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #005ebd;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+.page-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #ffffff9a;
+  z-index: 10;
+}
+/* ----------------------------------- end loading animation ----------------------------------- */
+/* -----------------------------------start navbar class----------------------------------- */
+.navbar-brand {
+  width: 150px;
+}
+.fs-s {
+  font-size: .9rem;
+}
+.fs-sm {
+  font-size: .8rem;
+}
+.nd-none {
+  display: none;
+}
+.useravater {
+  width: 44px;
+}
+.dropdown-toggle::after {
+  vertical-align: 0.1em;
+}
+.dropdown-menu[data-bs-popper] {
+  left: unset;
+  right: 0;
+}
+.nav-item span {
+  background-color: #007DFE;
+  color: #fff;
+  border-radius: 5px;
+  width: 85px;
+  text-align: center;
+  cursor: pointer;
+}
+/* -----------------------------------end navbar class----------------------------------- */
+/* -----------------------------------start welome page class----------------------------------- */
+.sgin-box {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 70%;
+  max-height: 60vh;
+  overflow: auto;
+}
+.password-convert {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  cursor: pointer;
+  transition: .3s all;
+}
+.password-convert:hover {
+  color: #007DFE;
+}
+.btn-sign {
+  width: 100%;
+  background-color: #007DFE;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: .5rem;
+  transition: .3s all;
+}
+.btn-sign:disabled {
+  opacity: .5;
+}
+#signup-btn,
+#signin-btn {
+  color: #007DFE;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* -----------------------------------page not found class----------------------------------- */
+.photobox img {
+  width: 35%;
+}
+.backto {
+  background-color: #007DFE;
+  color: #fff;
+  border-radius: 5px;
+  padding: .5rem 1.5rem;
+  transition: .3s all;
+  text-decoration: none;
+}
+.backto:hover {
+  color: #fff;
+  background-color: #005ebd;
+}
+/* -----------------------------------home class -----------------------------------*/
+.note-box {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow: auto;
+}
+.note-dark {
+  background: #4181ee;
+  color: #fff;
+}
+.box-option {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.no-data img {
+  width: 40%;
+  margin: auto;
+}
+.counter {
+  position: absolute;
+  bottom: .5rem;
+  right: 1.2rem;
+}
+/* -------------------------------------  responsive class  --------------------------------- */
+
+@media (max-width: 1399.98px) { 
+  .sgin-box {
+    width: 100%;
+  }
+  .header {
+    width: 40%;
+    margin: auto;
+  }
+  .navbar .dropdown-menu[data-bs-popper] {
+    right: 1rem;
+  }
+  .navbar .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .navbar .dropdown-menu {
+    font-size: .8rem;
+    padding-top : 1rem;
+  }
+  .navbar .dropdown-menu .dropdown-item {
+    width: 100%;
+    padding: .7rem;
+  }
+}
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+  .sgin-box {
+    width: 100%;
+  }
+  .header {
+    width: 75%;
+    margin: auto;
+  }
+}
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .d-sm-none {
+    display: none;
+  }
+  .sgin-box {
+    width: 100%;
+  }
+  .header {
+    width: 90%;
+    margin: auto;
+  }
+  .header h2 {
+    font-size: 1.2rem;
+  }
+  .header p {
+    font-size: .8rem;
+  }
+  .header .fs-sm {
+    font-size: .7rem;
+  }
+  .note-box h5 {
+    font-size: 1rem;
+  }
+  .note-box p {
+    font-size: .8rem;
+  }
+  .box-option {
+    font-size: 1.2rem;
+  }
+  .box-option .dropdown-item {
+    font-size: .8rem;
+  }
+}

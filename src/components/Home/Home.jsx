@@ -164,6 +164,7 @@ export default function Home({ userinfo }) {
     if (userinfo !== null) {
       getusernots()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 // ------------------------------------------------------- delete notes -------------------------------------------------------
@@ -242,17 +243,38 @@ export default function Home({ userinfo }) {
       $(".counter").removeClass("text-danger");
     }
   }
+// ------------------------------------------------------- tragger notes color -------------------------------------------------------
 
+useEffect(() => {
+  $("#aqua").on("click", function () {
+    $(".note-box").addClass("basic-card-aqua").removeClass("basic-card-lips basic-card-light basic-card-dark")
+  });
+  $("#lips").on("click", function () {
+    $(".note-box").addClass("basic-card-lips").removeClass("basic-card-aqua basic-card-light basic-card-dark")
+  });
+  $("#light").on("click", function () {
+    $(".note-box").addClass("basic-card-light").removeClass("basic-card-lips basic-card-aqua basic-card-dark")
+  });
+  $("#dark").on("click", function () {
+    $(".note-box").addClass("basic-card-dark").removeClass("basic-card-lips basic-card-light basic-card-aqua")
+  });
+
+}, [])
 // ------------------------------------------------------- xml rendar -------------------------------------------------------
-
   return (
     <div className='container pt-4 parant'>
 
-      {/* Button trigger modal */}
+
       <div className="float-end me-3">
+{/*  ------------------------------------------------------- Button trigger modal ------------------------------------------------------- */}
         <button type="button" className="btn btn-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#notemodal">
           <i className='fa-solid fa-plus'></i>
         </button>
+{/*  ------------------------------------------------------- Button trigger colors ------------------------------------------------------- */}
+        <div className="button-circle mt-5 basic-card-aqua" id='aqua'></div>
+        <div className="button-circle basic-card-lips" id='lips'></div>
+        <div className="button-circle basic-card-light" id='light'></div>
+        <div className="button-circle basic-card-dark" id='dark'></div>
       </div>
 
 {/*  ------------------------------------------------------- photo show when no notes found ------------------------------------------------------- */}
@@ -279,7 +301,7 @@ export default function Home({ userinfo }) {
         <div className="row">
           {noteslist.map((e, i) => {
             return <div key={i} className="col-sm-6 col-md-4 col-xl-3 pb-3 position-relative ">
-              <div className="note-box note-dark">
+              <div className="note-box">
                 <h5 className='fw-bold mb-3 pe-2'>{e.title}</h5>
                 <p className='mb-0'>{e.desc}</p>
                 <div className="box-option">

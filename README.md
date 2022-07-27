@@ -1,4 +1,4 @@
-# you can use this app for save your notes in real database, producted by your email
+# you can use this app for save your notes in real database, protected by your email
 tools and library :
 - react router dom
 - axios
